@@ -3,7 +3,8 @@
 <div align="center">
 
 ![Windsurf](https://img.shields.io/badge/Windsurf-IDE-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.6+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Poetry](https://img.shields.io/badge/Poetry-Package-60A5FA?style=for-the-badge&logo=poetry&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 ![Generated](https://img.shields.io/badge/Generated_by-Sonnet_3.7-FF5A00?style=for-the-badge&logo=codeium&logoColor=white)
 
@@ -25,6 +26,7 @@ A simple utility to open multiple Windsurf (VS Code-based) instances for differe
 🔍 **Path Validation** - Automatically checks if paths exist  
 ⚙️ **Flexible Options** - Supports profiles, custom data directories, and more  
 💻 **Simple Interface** - Easy to use command-line tool  
+📦 **Poetry Package** - Easy installation and dependency management
 
 </div>
 
@@ -32,14 +34,24 @@ A simple utility to open multiple Windsurf (VS Code-based) instances for differe
 
 <div align="center">
 
+### From Source
+
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/open-windsurf.git
+cd open-windsurf
 
-# Make the script executable
-chmod +x open_windsurf.py
+# Install with Poetry
+poetry install
 
-# Optionally, add to your PATH for system-wide access
+# Activate the virtual environment
+poetry shell
+```
+
+### Using pip (once published)
+
+```bash
+pip install open-windsurf
 ```
 
 </div>
@@ -48,8 +60,20 @@ chmod +x open_windsurf.py
 
 <div align="center">
 
+### When installed with Poetry
+
 ```bash
-./open_windsurf.py PATH1 PATH2 PATH3 ...
+# Within Poetry shell
+open-windsurf PATH1 PATH2 PATH3 ...
+
+# Or using Poetry run
+poetry run open-windsurf PATH1 PATH2 PATH3 ...
+```
+
+### When installed with pip
+
+```bash
+open-windsurf PATH1 PATH2 PATH3 ...
 ```
 
 </div>
@@ -61,19 +85,19 @@ chmod +x open_windsurf.py
 ### Open two separate Windsurf instances for different projects:
 
 ```bash
-./open_windsurf.py ~/projects/project1 ~/projects/project2
+open-windsurf ~/projects/project1 ~/projects/project2
 ```
 
 ### Open multiple projects with a specific profile:
 
 ```bash
-./open_windsurf.py --profile coding ~/projects/project1 ~/projects/project2
+open-windsurf --profile coding ~/projects/project1 ~/projects/project2
 ```
 
 ### Open multiple projects and wait for all instances to close:
 
 ```bash
-./open_windsurf.py --wait ~/projects/project1 ~/projects/project2
+open-windsurf --wait ~/projects/project1 ~/projects/project2
 ```
 
 </div>
@@ -95,8 +119,31 @@ chmod +x open_windsurf.py
 
 <div align="center">
 
-- Python 3.6+
+- Python 3.8+
 - Windsurf installed and available in your PATH
+- Poetry (for development)
+
+</div>
+
+## 🛠️ Development
+
+<div align="center">
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/open-windsurf.git
+cd open-windsurf
+
+# Install development dependencies
+poetry install
+
+# Run tests
+poetry run pytest
+
+# Format code
+poetry run black open_windsurf
+poetry run isort open_windsurf
+```
 
 </div>
 
