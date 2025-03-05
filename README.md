@@ -32,13 +32,11 @@ A simple utility to open multiple Windsurf (VS Code-based) instances for differe
 
 ## 📦 Installation
 
-<div align="center">
-
 ### From Source
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/open-windsurf.git
+git clone https://github.com/tom-doerr/open-windsurf.git
 cd open-windsurf
 
 # Install with Poetry
@@ -48,17 +46,13 @@ poetry install
 poetry shell
 ```
 
-### Using pip (once published)
+### Using pip
 
 ```bash
 pip install open-windsurf
 ```
 
-</div>
-
 ## 🚀 Usage
-
-<div align="center">
 
 ### When installed with Poetry
 
@@ -76,11 +70,7 @@ poetry run open-windsurf PATH1 PATH2 PATH3 ...
 open-windsurf PATH1 PATH2 PATH3 ...
 ```
 
-</div>
-
 ## 📋 Examples
-
-<div align="center">
 
 ### Open two separate Windsurf instances for different projects:
 
@@ -100,11 +90,7 @@ open-windsurf --profile coding ~/projects/project1 ~/projects/project2
 open-windsurf --wait ~/projects/project1 ~/projects/project2
 ```
 
-</div>
-
 ## ⚙️ Options
-
-<div align="center">
 
 | Option | Description |
 |--------|-------------|
@@ -113,25 +99,17 @@ open-windsurf --wait ~/projects/project1 ~/projects/project2
 | `--profile PROFILE` | Use a specific profile for all instances |
 | `--new-window` | Force opening in new windows |
 
-</div>
-
 ## 📋 Requirements
-
-<div align="center">
 
 - Python 3.8+
 - Windsurf installed and available in your PATH
 - Poetry (for development)
 
-</div>
-
 ## 🛠️ Development
-
-<div align="center">
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/open-windsurf.git
+git clone https://github.com/tom-doerr/open-windsurf.git
 cd open-windsurf
 
 # Install development dependencies
@@ -144,8 +122,6 @@ poetry run pytest
 poetry run black open_windsurf
 poetry run isort open_windsurf
 ```
-
-</div>
 
 ---
 
